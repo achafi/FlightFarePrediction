@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Travel Budget</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,7 +14,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 
 <!-- Navigation Bar -->
 <div class="w3-bar w3-white w3-border-bottom w3-xlarge">
-  <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Logo</b></a>
+  <a href="https://github.com/achafi/FlightFarePrediction" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-github w3-margin-right"></i>Gihub</b></a>
   <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"><i class="fa fa-search"></i></a>
 </div>
 
@@ -33,69 +33,74 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       <h3>Realistic Travel Budget Estimation</h3>
       <div class="w3-row-padding" style="margin:0 -16px;">
         <div class="w3-half">
-          <label>From</label>
-          <!--<input class="w3-input w3-border" type="text" placeholder="Departing from">-->
-          <select name="Departing from" id="Source" required="required">
-            <option value="Delhi">Delhi</option>
-            <option value="Kolkata">Kolkata</option>
-            <option value="Mumbai">Mumbai</option>
-            <option value="Chennai">Chennai</option>
-        </select>
-        </div>
-        <div class="w3-half">
-          <label>To</label>
-          <!--<input class="w3-input w3-border" type="text" placeholder="Arriving at">-->
-          <select name="Arriving at" id="Destination" required="required">
-            <option value="Cochin">Cochin</option>
-            <option value="Delhi">Delhi</option>
-            <option value="New Delhi">New Delhi</option>
-            <option value="Hyderabad">Hyderabad</option>
-            <option value="Kolkata">Kolkata</option>
-        </select>
-        </div>
-        <div class="w3-half">
-            <label>Departure Time</label>
-            <!-- Departure -->
-            <input type="datetime-local" name="Dep_Time" id="Dep_Time" required="required">
-        </div>
-        <div class="w3-half">
-            <label>Arrival Date</label>
-            <!-- Arrival -->
-            <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required">
-        </div>
-        <div class="w3-half">
-            <label>Number of Stops-over</label>
-             <!-- Total Stops -->
-             <select name="stops" required="required">
-                <option value="0">Non-Stop</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-        </div>
-        <div class="w3-half">
-            <label>Airline</label>
-                <!-- Airline -->
-            <select name="airline" id="airline" required="required">
-            <option value="Jet Airways">Jet Airways</option>
-            <option value="IndiGo">IndiGo</option>
-            <option value="Air India">Air India</option>
-            <option value="Multiple carriers">Multiple carriers</option>
-            <option value="SpiceJet">SpiceJet</option>
-            <option value="Vistara">Vistara</option>
-            <option value="Air Asia">Air Asia</option>
-            <option value="GoAir">GoAir</option>
-            <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
-            <option value="Jet Airways Business">Jet Airways Business</option>
-            <option value="Vistara Premium economy">Vistara Premium economy</option>
-            <option value="Trujet">Trujet</option>                 
-            </select>
-        </div>
-      </div>
+            <form action="\predict" method="post">
+                <label>From</label>
+                <!--<input class="w3-input w3-border" type="text" placeholder="Departing from">-->
+                <select name="Source" id="Source" required="required">
+                  <option value="Delhi">Delhi</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Chennai">Chennai</option>
+              </select>
+              </div>
+              <div class="w3-half">
+                <label>To</label>
+                <!--<input class="w3-input w3-border" type="text" placeholder="Arriving at">-->
+                <select name="Destination" id="Destination" required="required">
+                  <option value="Cochin">Cochin</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="New Delhi">New Delhi</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Kolkata">Kolkata</option>
+              </select>
+              </div>
+              <div class="w3-half">
+                  <label>Departure Time</label>
+                  <!-- Departure -->
+                  <input type="datetime-local" name="Dep_Time" id="Dep_Time" required="required">
+              </div>
+              <div class="w3-half">
+                  <label>Arrival Date</label>
+                  <!-- Arrival -->
+                  <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required">
+              </div>
+              <div class="w3-half">
+                  <label>Number of Stops-over</label>
+                   <!-- Total Stops -->
+                   <select name="stops" required="required">
+                      <option value="0">Non-Stop</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select>
+              </div>
+              <div class="w3-half">
+                  <label>Airline</label>
+                      <!-- Airline -->
+                  <select name="airline" id="airline" required="required">
+                  <option value="Jet Airways">Jet Airways</option>
+                  <option value="IndiGo">IndiGo</option>
+                  <option value="Air India">Air India</option>
+                  <option value="Multiple carriers">Multiple carriers</option>
+                  <option value="SpiceJet">SpiceJet</option>
+                  <option value="Vistara">Vistara</option>
+                  <option value="Air Asia">Air Asia</option>
+                  <option value="GoAir">GoAir</option>
+                  <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+                  <option value="Jet Airways Business">Jet Airways Business</option>
+                  <option value="Vistara Premium economy">Vistara Premium economy</option>
+                  <option value="Trujet">Trujet</option>                 
+                  </select>
+              </div>
+            </div>
+      
+            <p><input type="submit" value="Submit and predict price" class="w3-button w3-dark-grey"></p>
+            
+            <p>{{ prediction_text }}</p>
 
-      <p><input type="submit" value="Submit and predict price" class="w3-button w3-dark-grey"></p>
-      <!--<p><button class="w3-button w3-dark-grey">Search and find dates</button></p>-->
+        </form>
+
     </div>
 
     <div id="Hotel" class="w3-container w3-white w3-padding-16 myLink">
@@ -230,6 +235,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
   <p>Powered by <a href="https://achafi.github.io/myportfolio/" target="_blank" class="w3-hover-text-green">Assia CHAFI</a></p>
 </footer>
 
+<!--Javascript-->
 <script>
 // Tabs
 function openLink(evt, linkName) {
@@ -250,5 +256,14 @@ function openLink(evt, linkName) {
 document.getElementsByClassName("tablink")[0].click();
 </script>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+crossorigin="anonymous"></script>
 </body>
 </html>
